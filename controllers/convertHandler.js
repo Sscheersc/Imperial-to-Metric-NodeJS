@@ -2,7 +2,6 @@ function ConvertHandler() {
   
   this.getNum = function (input) {
     let result;
-    // Match the number part (including fractions and decimals)
     let numRegex = /^[\d/.]+/;
     let num = input.match(numRegex);
 
@@ -94,7 +93,7 @@ function ConvertHandler() {
         result = "invalid unit";
     }
 
-    return result;
+    return parseFloat(result.toFixed(5));
   };
 }
 
