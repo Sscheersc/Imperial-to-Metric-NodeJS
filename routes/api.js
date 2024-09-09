@@ -34,7 +34,7 @@ module.exports = function (app) {
       const returnUnit = convertHandler.getReturnUnit(initUnit);
 
       // Directly create the response string using existing methods
-      const responseString = `${initNum} ${initUnit} converts to ${returnNum} ${returnUnit}`;
+      const responseString = `${initNum} ${convertHandler.spellOutUnit(initUnit)} converts to ${returnNum} ${convertHandler.spellOutUnit(returnUnit)}`;
 
       res.status(200).json({
         initNum,
